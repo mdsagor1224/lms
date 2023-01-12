@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     use HasFactory;
+    public function curriculams(){
+        return $this->hasMany(Curriculum::class);
+    }
 }

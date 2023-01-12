@@ -17,14 +17,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->unsignedBigInteger('curriculam_id')->default(0);
+            $table->unsignedBigInteger('curriculum_id')->default(0);
             $table->unsignedBigInteger('exam_id')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->string('link');
 
             $table->timestamps();
 
-            $table->foreign('curriculam_id')->references('id')->on('curriculams')->onDelete('cascade');
+            $table->foreign('curriculum_id')->references('id')->on('curriculums')->onDelete('cascade');
             $table->foreign('exam_id')->references('id')->on('exams')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
