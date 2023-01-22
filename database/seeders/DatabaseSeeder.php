@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       $defaultPermissions =['lead-management', 'create-admin'];
+       $defaultPermissions =['lead-management', 'create-admin','user-management'];
        foreach($defaultPermissions as $permission){
           Permission::create(['name' => $permission]);
        }
@@ -40,7 +40,8 @@ class DatabaseSeeder extends Seeder
           'name' => 'Laravel',
           'description' => 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout',
           'image'=> 'https://laravel.com/img/logomark.min.svg',
-          'user_id' => $teacher->id
+          'user_id' => $teacher->id,
+          'price' => 500
        ]);
 
        Curriculum::factory(10)->create();
