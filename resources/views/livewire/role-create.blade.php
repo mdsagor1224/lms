@@ -1,6 +1,6 @@
 <form wire:submit.prevent="formSubmit">
      <div class="mb-4">
-     <label for="name" class="lms-label">Name</label>
+        <label for="name" class="lms-label">Name</label>
         <input wire:model.lazy="name" id="name" type="text" class="lms-input">
     
         @error('name')
